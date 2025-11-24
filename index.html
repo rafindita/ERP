@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYD | Intelligent Enterprise</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="globalLoader" class="global-loader"></div>
+
+    <div class="app-layout">
+        <aside class="sidebar" id="mainSidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div class="brand-info">
+                    <span class="brand-name">SYD</span>
+                    <span class="brand-tag">Enterprise</span>
+                </div>
+            </div>
+
+            <div class="nav-container" id="sidebarMenu">
+                </div>
+
+            <div class="sidebar-footer">
+                <div class="user-profile" onclick="App.openSettings()">
+                    <div class="avatar">RS</div>
+                    <div class="user-details">
+                        <div class="user-name">Rafindita S.</div>
+                        <div class="user-role">Super Admin</div>
+                    </div>
+                    <div class="user-action">
+                        <i class="fa-solid fa-gear" style="font-size:12px; color:#64748b;"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumbs-area">
+                    <button class="sidebar-toggle-btn" onclick="App.toggleSidebar()" title="Toggle Sidebar">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <div class="breadcrumbs" id="breadcrumbs">Command Center</div>
+                </div>
+
+                <div class="topbar-actions">
+                    <div id="topbarClock"></div>
+
+                    <div class="status-badge">
+                        <span class="status-dot"></span> SYSTEM LIVE
+                    </div>
+                    
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted); font-size:12px;"></i>
+                        <input type="text" placeholder="Search data..." class="search-input">
+                        <span class="kbd-shortcut">⌘K</span>
+                    </div>
+                    
+                    <button class="icon-btn" title="Toggle Theme" onclick="App.toggleTheme()">
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    </button>
+
+                    <button class="icon-btn relative" title="Notifications" onclick="App.toggleNotifications()">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot" id="notifDot"></span>
+                    </button>
+
+                </div>
+            </header>
+
+            <div class="content-scrollable" id="appRoot">
+                </div>
+        </main>
+    </div>
+
+    <div class="ai-fab" onclick="App.toggleAI()" title="Ask Neural Core">
+        <i class="fa-solid fa-sparkles"></i>
+        <div class="fab-pulse"></div>
+    </div>
+
+    <div class="ai-panel" id="aiPanel">
+        <div class="ai-header">
+            <div class="ai-title">
+                <i class="fa-solid fa-robot" style="margin-right:8px;"></i> <span>Neural Core AI</span>
+            </div>
+            <button class="close-ai-btn" onclick="App.toggleAI()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="ai-body" id="aiContent">
+            <div class="ai-insight">
+                <strong>System Ready.</strong><br>
+                I am monitoring all 10 modules continuously. How can I assist you with the data analysis today?
+            </div>
+        </div>
+        <div class="ai-footer">
+            <div class="input-group">
+                <input type="text" id="aiInput" placeholder="Ask AI..." onkeypress="if(event.key==='Enter') App.simulateAI()">
+                <button onclick="App.simulateAI()"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalData" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Entry</h3>
+                <button class="close-modal" onclick="App.closeModal('modalData')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="modalFormContainer">
+                </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="App.closeModal('modalData')">Cancel</button>
+                <button class="btn-primary" onclick="App.submitForm()">Save Entry</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalSettings" class="modal-overlay">
+        <div class="modal-box small">
+            <div class="modal-header">
+                <h3>System Settings</h3>
+                <button class="close-modal" onclick="App.closeModal('modalSettings')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Interface Theme</label>
+                    <select class="form-select" onchange="App.toggleTheme()">
+                        <option value="light">Light Mode</option>
+                        <option value="dark">Dark Mode</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>System Density</label>
+                    <select class="form-select">
+                        <option selected>Compact (90% Zoom)</option>
+                        <option>Comfortable</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label>Notification Priority</label>
+                    <select class="form-select">
+                        <option>All Alerts</option>
+                        <option>Critical Only</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="App.closeModal('modalSettings'); App.toast('Settings Saved')">Apply Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="panelNotif" class="side-panel">
+        <div class="panel-header">
+            <h3>Notifications</h3>
+            <button onclick="App.toggleNotifications()" class="close-icon"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="panel-body">
+            <div class="notif-item unread">
+                <div class="notif-icon warn"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="notif-content"><strong>AP Alert</strong><p>Duplicate invoice #INV-99 detected via AI match.</p><span>2m ago</span></div>
+            </div>
+            <div class="notif-item">
+                <div class="notif-icon success"><i class="fa-solid fa-check"></i></div>
+                <div class="notif-content"><strong>Approval</strong><p>PO #8823 has been approved by Finance.</p><span>1h ago</span></div>
+            </div>
+             <div class="notif-item">
+                <div class="notif-icon info"><i class="fa-solid fa-server"></i></div>
+                <div class="notif-content"><strong>IT Ops</strong><p>Scheduled maintenance completed successfully.</p><span>3h ago</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panelDetail" class="side-panel wide-panel">
+        <div class="panel-header">
+            <h3 id="detailTitle">Record Details</h3>
+            <button onclick="App.closeDetailPanel()" class="close-icon"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="panel-body" id="detailContent">
+            </div>
+        <div class="panel-footer-action">
+            <button class="btn-secondary" onclick="App.closeDetailPanel()">Close</button>
+            <button class="btn-primary" onclick="App.toast('Record Updated')"><i class="fa-solid fa-pen-to-square"></i> Edit Record</button>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
