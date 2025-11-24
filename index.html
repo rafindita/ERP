@@ -16,7 +16,7 @@
     <div id="globalLoader" class="global-loader"></div>
 
     <div class="app-layout">
-        <aside class="sidebar">
+        <aside class="sidebar" id="mainSidebar">
             <div class="sidebar-header">
                 <div class="brand-logo">
                     <i class="fa-solid fa-layer-group"></i>
@@ -38,7 +38,7 @@
                         <div class="user-role">Super Admin</div>
                     </div>
                     <div class="user-action">
-                        <i class="fa-solid fa-gear"></i>
+                        <i class="fa-solid fa-gear" style="font-size:12px; color:#64748b;"></i>
                     </div>
                 </div>
             </div>
@@ -46,37 +46,41 @@
 
         <main class="main-content">
             <header class="topbar">
-            <div class="breadcrumbs-area">
-                <div class="breadcrumbs" id="breadcrumbs">Command Center</div>
-            </div>
-
-            <div class="topbar-actions">
-                <div id="topbarClock"></div>
-
-                <div class="status-badge">
-                    <span class="status-dot"></span> SYSTEM LIVE
+                <div class="breadcrumbs-area">
+                    <button class="sidebar-toggle-btn" onclick="App.toggleSidebar()" title="Toggle Sidebar">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <div class="breadcrumbs" id="breadcrumbs">Command Center</div>
                 </div>
-                
-                <div class="search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search data..." class="search-input">
-                    <span class="kbd-shortcut">⌘K</span>
+
+                <div class="topbar-actions">
+                    <div id="topbarClock"></div>
+
+                    <div class="status-badge">
+                        <span class="status-dot"></span> SYSTEM LIVE
+                    </div>
+                    
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted); font-size:12px;"></i>
+                        <input type="text" placeholder="Search data..." class="search-input">
+                        <span class="kbd-shortcut">⌘K</span>
+                    </div>
+                    
+                    <button class="icon-btn" title="Toggle Theme" onclick="App.toggleTheme()">
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    </button>
+
+                    <button class="icon-btn relative" title="Notifications" onclick="App.toggleNotifications()">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot" id="notifDot"></span>
+                    </button>
+
                 </div>
-                
-                <button class="icon-btn" title="Toggle Theme" onclick="App.toggleTheme()">
-                    <i class="fa-solid fa-moon" id="themeIcon"></i>
-                </button>
-
-                <button class="icon-btn relative" title="Notifications" onclick="App.toggleNotifications()">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="notification-dot"></span>
-                </button>
-
-            </div>
             </header>
 
-    <div class="content-scrollable" id="appRoot"></div>
-</main>
+            <div class="content-scrollable" id="appRoot">
+                </div>
+        </main>
     </div>
 
     <div class="ai-fab" onclick="App.toggleAI()" title="Ask Neural Core">
@@ -87,7 +91,7 @@
     <div class="ai-panel" id="aiPanel">
         <div class="ai-header">
             <div class="ai-title">
-                <i class="fa-solid fa-robot"></i> <span>Neural Core AI</span>
+                <i class="fa-solid fa-robot" style="margin-right:8px;"></i> <span>Neural Core AI</span>
             </div>
             <button class="close-ai-btn" onclick="App.toggleAI()"><i class="fa-solid fa-xmark"></i></button>
         </div>
@@ -135,10 +139,10 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>System Language</label>
+                    <label>System Density</label>
                     <select class="form-select">
-                        <option>English (US)</option>
-                        <option>Bahasa Indonesia</option>
+                        <option selected>Compact (90% Zoom)</option>
+                        <option>Comfortable</option>
                     </select>
                 </div>
                  <div class="form-group">
