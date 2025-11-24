@@ -1,7 +1,7 @@
 /**
  * =================================================================
  * BLUE HORIZON ERP - v4.8 ULTRA-OPTIMIZED MASTER & INTEGRATED
- * (Kode Digabungkan, Data Diperkuat, Detail Record Disesuaikan)
+ * (All Textual Content Translated to English for Global Context)
  * =================================================================
  */
 
@@ -18,98 +18,98 @@ const AppConfig = {
     modules: [
         {
             id: 'mod6', title: 'Dashboard', icon: 'fa-chart-pie',
-            desc: 'Executive dashboards, pelaporan real-time, dan analitik prediktif untuk pengambilan keputusan strategis.',
+            desc: 'Executive dashboards, real-time reporting, and predictive analytics for strategic decision-making.',
             processes: [
-                { id: '6.1', title: 'Executive Dashboard', type: 'bi_dash', desc: 'Pemantauan KPI utama secara *real-time* dan pelaporan naratif dewan direksi.' },
-                { id: '6.2', title: 'Advanced Analytics', type: 'chart_grid', desc: 'Pemodelan AI Prediktif & Preskriptif untuk optimalisasi operasional.' }
+                { id: '6.1', title: 'Executive Dashboard', type: 'bi_dash', desc: 'Real-time monitoring of key KPIs and executive board narrative reporting.' },
+                { id: '6.2', title: 'Advanced Analytics', type: 'chart_grid', desc: 'Predictive & Prescriptive AI Modeling for operational optimization.' }
             ]
         },
         {
             id: 'mod1', title: 'Finance & Accounting', icon: 'fa-coins',
-            desc: 'Orkestrasi keuangan, manajemen akuntansi, dan kepatuhan perpajakan perusahaan.',
+            desc: 'Financial orchestration, accounting management, and corporate tax compliance.',
             processes: [
-                { id: '1.1', title: 'Accounts Payable', type: 'table', dbKey: 'fin_ap', cols: ['PO Num', 'Vendor', 'Inv Date', 'Amount', 'Status'], desc: 'Otomasi pemrosesan faktur, pembayaran, dan pencocokan 3 arah (3-way matching).' },
-                { id: '1.2', title: 'Accounts Receivable', type: 'table', dbKey: 'fin_ar', cols: ['Inv ID', 'Client', 'Due Date', 'Amount', 'Risk Score'], desc: 'Manajemen siklus *Order-to-Cash* (O2C) dan koleksi piutang.' },
-                { id: '1.3', title: 'General Ledger', type: 'table', dbKey: 'fin_gl', cols: ['Journal ID', 'Account Code', 'Debit', 'Credit', 'Post Date'], desc: 'Rekonsiliasi harian, jurnal otomatis, dan penutupan buku (closing) yang akurat.' },
-                { id: '1.4', 'title': 'FP&A', type: 'chart_grid', desc: 'Anggaran, peramalan (forecasting), dan analisis skenario multi-dimensi.' },
-                { id: '1.5', title: 'Treasury & Cash', type: 'table', dbKey: 'fin_treasury', cols: ['Trans ID', 'Type', 'Amount', 'Currency', 'Liquidity Pos'], desc: 'Visibilitas kas global, manajemen likuiditas, dan lindung nilai (hedging).' },
-                { id: '1.6', title: 'Fixed Assets', type: 'table', dbKey: 'fin_assets', cols: ['Asset Tag', 'Serial Num', 'Book Value', 'Depreciation', 'Location'], desc: 'Siklus hidup aset tetap, depresiasi otomatis, dan inventaris.' },
-                { id: '1.7', title: 'T&E Management', type: 'table', dbKey: 'fin_exp', cols: ['Claim ID', 'Employee', 'Exp Type', 'Amount', 'Audit Status'], desc: 'Klaim biaya perjalanan & hiburan (*T&E*), dan pengecekan kepatuhan kebijakan.' },
-                { id: '1.8', title: 'Project Accounting', type: 'table', dbKey: 'fin_proj', cols: ['Project', 'Budget', 'Actual Cost', 'Variance', 'Progress'], desc: 'Pelacakan profitabilitas proyek, alokasi biaya, dan penagihan proyek.' },
-                { id: '1.9', title: 'Revenue Recognition', type: 'table', dbKey: 'fin_rev', cols: ['Contract', 'Obligation', 'Recog. Amount', 'Date', 'Standard'], desc: 'Kepatuhan standar IFRS 15 / PSAK 72 untuk pengakuan pendapatan.' },
-                { id: '1.10', title: 'IT Cost Allocation', type: 'table', dbKey: 'fin_itcost', cols: ['Dept', 'Service', 'Usage', 'Allocated Cost', 'Period'], desc: 'Pelaporan *Chargeback* / *Showback* dan alokasi biaya layanan IT.' },
-                { id: '1.11', title: 'Tax Administration', type: 'table', dbKey: 'fin_tax', cols: ['Tax Type', 'Period', 'Base Amount', 'Tax Due', 'Status'], desc: 'Manajemen kepatuhan dan pelaporan pajak (PPN, PPh) secara terpusat.' }
+                { id: '1.1', title: 'Accounts Payable', type: 'table', dbKey: 'fin_ap', cols: ['PO Num', 'Vendor', 'Inv Date', 'Amount', 'Status'], desc: 'Automating invoice processing, payments, and 3-way matching.' },
+                { id: '1.2', title: 'Accounts Receivable', type: 'table', dbKey: 'fin_ar', cols: ['Inv ID', 'Client', 'Due Date', 'Amount', 'Risk Score'], desc: 'Managing the Order-to-Cash (O2C) cycle and collections.' },
+                { id: '1.3', title: 'General Ledger', type: 'table', dbKey: 'fin_gl', cols: ['Journal ID', 'Account Code', 'Debit', 'Credit', 'Post Date'], desc: 'Daily reconciliation, automated journals, and accurate book closing.' },
+                { id: '1.4', 'title': 'FP&A', type: 'chart_grid', desc: 'Budgeting, forecasting, and multi-dimensional scenario analysis.' },
+                { id: '1.5', title: 'Treasury & Cash', type: 'table', dbKey: 'fin_treasury', cols: ['Trans ID', 'Type', 'Amount', 'Currency', 'Liquidity Pos'], desc: 'Global cash visibility, liquidity management, and hedging.' },
+                { id: '1.6', title: 'Fixed Assets', type: 'table', dbKey: 'fin_assets', cols: ['Asset Tag', 'Serial Num', 'Book Value', 'Depreciation', 'Location'], desc: 'Fixed asset lifecycle, automated depreciation, and inventory.' },
+                { id: '1.7', title: 'T&E Management', type: 'table', dbKey: 'fin_exp', cols: ['Claim ID', 'Employee', 'Exp Type', 'Amount', 'Audit Status'], desc: 'Travel & Entertainment (T&E) expense claims and policy compliance checks.' },
+                { id: '1.8', title: 'Project Accounting', type: 'table', dbKey: 'fin_proj', cols: ['Project', 'Budget', 'Actual Cost', 'Variance', 'Progress'], desc: 'Tracking project profitability, cost allocation, and project billing.' },
+                { id: '1.9', title: 'Revenue Recognition', type: 'table', dbKey: 'fin_rev', cols: ['Contract', 'Obligation', 'Recog. Amount', 'Date', 'Standard'], desc: 'IFRS 15 / PSAK 72 compliance for revenue recognition.' },
+                { id: '1.10', title: 'IT Cost Allocation', type: 'table', dbKey: 'fin_itcost', cols: ['Dept', 'Service', 'Usage', 'Allocated Cost', 'Period'], desc: 'Chargeback / Showback reporting and IT service cost allocation.' },
+                { id: '1.11', title: 'Tax Administration', type: 'table', dbKey: 'fin_tax', cols: ['Tax Type', 'Period', 'Base Amount', 'Tax Due', 'Status'], desc: 'Centralized tax compliance and reporting (VAT, Income Tax).' }
             ]
         },
         {
             id: 'mod2', title: 'Project Management', icon: 'fa-diagram-project',
-            desc: 'Manajemen siklus proyek, eksekusi, dan alokasi sumber daya perusahaan.',
+            desc: 'Project lifecycle management, execution, and corporate resource allocation.',
             processes: [
-                { id: '2.1', title: 'Portfolio Mgmt (PPM)', type: 'kanban', dbKey: 'pm_ppm', desc: 'Seleksi proyek, prioritas, dan keselarasan dengan strategi bisnis.' },
-                { id: '2.2', title: 'Project Execution', type: 'table', dbKey: 'pm_exec', cols: ['Project', 'Manager', 'Progress', 'Health', 'Deadline'], desc: 'Pemantauan WBS, penjadwalan, dan pelaporan status proyek.' },
-                { id: '2.3', title: 'Resource Management', type: 'table', dbKey: 'pm_res', cols: ['Resource', 'Role', 'Skill Set', 'Utilization', 'Project'], desc: 'Perencanaan kapasitas dan alokasi talenta untuk proyek.' }
+                { id: '2.1', title: 'Portfolio Mgmt (PPM)', type: 'kanban', dbKey: 'pm_ppm', desc: 'Project selection, prioritization, and alignment with business strategy.' },
+                { id: '2.2', title: 'Project Execution', type: 'table', dbKey: 'pm_exec', cols: ['Project', 'Manager', 'Progress', 'Health', 'Deadline'], desc: 'WBS monitoring, scheduling, and project status reporting.' },
+                { id: '2.3', title: 'Resource Management', type: 'table', dbKey: 'pm_res', cols: ['Resource', 'Role', 'Skill Set', 'Utilization', 'Project'], desc: 'Capacity planning and talent allocation for projects.' }
             ]
         },
         {
             id: 'mod3', title: 'HCM', icon: 'fa-users',
-            desc: 'Manajemen modal manusia, penggajian, dan siklus hidup talenta terintegrasi.',
+            desc: 'Human capital management, payroll, and integrated talent lifecycle.',
             processes: [
-                { id: '3.1', title: 'Core HR & Payroll', type: 'table', dbKey: 'hr_core', cols: ['NIK', 'Name', 'Department', 'Net Pay', 'Join Date'], desc: 'Administrasi SDM, data master karyawan, dan siklus penggajian bulanan.' },
-                { id: '3.2', title: 'Integrated Talent', type: 'kanban', dbKey: 'hr_talent', desc: 'Manajemen rekrutmen, kinerja, suksesi, dan retensi karyawan.' }
+                { id: '3.1', title: 'Core HR & Payroll', type: 'table', dbKey: 'hr_core', cols: ['NIK', 'Name', 'Department', 'Net Pay', 'Join Date'], desc: 'HR administration, employee master data, and monthly payroll cycle.' },
+                { id: '3.2', title: 'Integrated Talent', type: 'kanban', dbKey: 'hr_talent', desc: 'Management of recruitment, performance, succession, and employee retention.' }
             ]
         },
         {
             id: 'mod4', title: 'CRM', icon: 'fa-handshake',
-            desc: 'Manajemen hubungan pelanggan, otomasi penjualan, dan layanan purna jual.',
+            desc: 'Customer relationship management, sales automation, and after-sales service.',
             processes: [
-                { id: '4.1', title: 'Sales Force Auto', type: 'kanban', dbKey: 'crm_sfa', desc: 'Otomasi proses *Lead-to-Customer* dan manajemen *pipeline* penjualan.' },
-                { id: '4.2', title: 'Customer Service', type: 'table', dbKey: 'crm_svc', cols: ['Ticket ID', 'Agent Name', 'Issue', 'Priority', 'SLA Status'], desc: 'Sistem *ticketing* dukungan pelanggan dan pelacakan waktu resolusi.' },
-                { id: '4.3', title: 'Customer Success', type: 'table', dbKey: 'crm_cs', cols: ['Client', 'Health Score', 'Churn Risk', 'Next Review', 'CSM'], desc: 'Pemantauan retensi, kesehatan klien, dan mitigasi risiko *churn*.' },
-                { id: '4.4', title: 'CPQ', type: 'table', dbKey: 'crm_cpq', cols: ['Quote ID', 'Client', 'Config', 'Total Value', 'Status'], desc: 'Konfigurasi produk, penetapan harga, dan penawaran terintegrasi (*CPQ*).' },
-                { id: '4.5', title: 'Marketing Auto', type: 'chart_grid', desc: 'Analitik kampanye pemasaran, segmentasi pelanggan, dan *lead nurturing*.' }
+                { id: '4.1', title: 'Sales Force Auto', type: 'kanban', dbKey: 'crm_sfa', desc: 'Automation of the Lead-to-Customer process and sales pipeline management.' },
+                { id: '4.2', title: 'Customer Service', type: 'table', dbKey: 'crm_svc', cols: ['Ticket ID', 'Agent Name', 'Issue', 'Priority', 'SLA Status'], desc: 'Customer support ticketing system and resolution time tracking.' },
+                { id: '4.3', title: 'Customer Success', type: 'table', dbKey: 'crm_cs', cols: ['Client', 'Health Score', 'Churn Risk', 'Next Review', 'CSM'], desc: 'Monitoring retention, client health, and churn risk mitigation.' },
+                { id: '4.4', title: 'CPQ', type: 'table', dbKey: 'crm_cpq', cols: ['Quote ID', 'Client', 'Config', 'Total Value', 'Status'], desc: 'Integrated product configuration, pricing, and quotation (CPQ).' },
+                { id: '4.5', title: 'Marketing Auto', type: 'chart_grid', desc: 'Marketing campaign analytics, customer segmentation, and lead nurturing.' }
             ]
         },
         {
             id: 'mod5', title: 'Procurement', icon: 'fa-cart-flatbed', 
-            desc: 'Manajemen sumber (*sourcing*), pembelian (*purchasing*), dan vendor untuk penghematan biaya.', 
+            desc: 'Sourcing, purchasing, and vendor management for cost savings.', 
             processes: [
-                { id: '5.1', title: 'Sourcing & Vendor', type: 'table', dbKey: 'proc_vendor', cols: ['Vendor', 'Category', 'Perf. Score', 'Risk', 'Status'], desc: 'Seleksi vendor strategis, penilaian kinerja, dan manajemen risiko pemasok.' }, 
-                { id: '5.2', title: 'Contract Mgmt (CLM)', type: 'kanban', dbKey: 'proc_clm', desc: 'Siklus hidup kontrak (*CLM*), negosiasi, dan kepatuhan kontrak.' }
+                { id: '5.1', title: 'Sourcing & Vendor', type: 'table', dbKey: 'proc_vendor', cols: ['Vendor', 'Category', 'Perf. Score', 'Risk', 'Status'], desc: 'Strategic vendor selection, performance assessment, and supplier risk management.' }, 
+                { id: '5.2', title: 'Contract Mgmt (CLM)', type: 'kanban', dbKey: 'proc_clm', desc: 'Contract Lifecycle Management (CLM), negotiation, and contract compliance.' }
             ] 
         },
         { 
             id: 'mod8', title: 'Services Procurement', icon: 'fa-file-signature', 
-            desc: 'Pengadaan layanan outsourcing dan manajemen Statement of Work (SOW) yang terstruktur.', 
+            desc: 'Procurement of outsourcing services and structured Statement of Work (SOW) management.', 
             processes: [
-                { id: '8.1', title: 'Sourcing Services', type: 'kanban', dbKey: 'svc_source', desc: 'Pencarian dan kualifikasi tenaga ahli atau penyedia jasa outsourcing.' },
-                { id: '8.2', title: 'SOW Lifecycle', type: 'kanban', dbKey: 'svc_sow', desc: 'Penyusunan, negosiasi, dan otorisasi *Statement of Work* (SOW).' },
-                { id: '8.3', title: 'Performance Tracking', type: 'table', dbKey: 'svc_perf', cols: ['SOW ID', 'Vendor', 'Milestone', 'Deliverable', 'Status'], desc: 'Pelacakan eksekusi, penerimaan, dan pembayaran berdasarkan pencapaian *milestone*.' }
+                { id: '8.1', title: 'Sourcing Services', type: 'kanban', dbKey: 'svc_source', desc: 'Searching and qualification of experts or outsourcing service providers.' },
+                { id: '8.2', title: 'SOW Lifecycle', type: 'kanban', dbKey: 'svc_sow', desc: 'Drafting, negotiation, and authorization of the Statement of Work (SOW).' },
+                { id: '8.3', title: 'Performance Tracking', type: 'table', dbKey: 'svc_perf', cols: ['SOW ID', 'Vendor', 'Milestone', 'Deliverable', 'Status'], desc: 'Tracking execution, acceptance, and payment based on milestone achievement.' }
             ] 
         },
         { 
             id: 'mod7', title: 'GRC', icon: 'fa-shield-halved', 
-            desc: 'Manajemen Tata Kelola (*Governance*), Risiko, dan Kepatuhan (*Compliance*) terpusat.', 
+            desc: 'Centralized Governance, Risk, and Compliance management.', 
             processes: [
-                { id: '7.1', title: 'Internal Controls', type: 'table', dbKey: 'grc_ctrl', cols: ['Control ID', 'Process', 'Test Result', 'Risk Score', 'Owner'], desc: 'Pemantauan dan pengujian efektivitas kontrol internal (misal: SOX).' },
-                { id: '7.2', title: 'Audit Management', type: 'kanban', dbKey: 'grc_audit', desc: 'Perencanaan, eksekusi, dan tindak lanjut temuan audit internal maupun eksternal.' },
-                { id: '7.3', title: 'Compliance', type: 'table', dbKey: 'grc_comp', cols: ['Reg ID', 'Requirement', 'Gap Analysis', 'Mitigation Status', 'Deadline'], desc: 'Pelacakan kepatuhan terhadap regulasi domestik (OJK, UU PDP) dan global (GDPR, ISO).' }
+                { id: '7.1', title: 'Internal Controls', type: 'table', dbKey: 'grc_ctrl', cols: ['Control ID', 'Process', 'Test Result', 'Risk Score', 'Owner'], desc: 'Monitoring and testing the effectiveness of internal controls (e.g., SOX).' },
+                { id: '7.2', title: 'Audit Management', type: 'kanban', dbKey: 'grc_audit', desc: 'Planning, execution, and follow-up on internal and external audit findings.' },
+                { id: '7.3', title: 'Compliance', type: 'table', dbKey: 'grc_comp', cols: ['Reg ID', 'Requirement', 'Gap Analysis', 'Mitigation Status', 'Deadline'], desc: 'Tracking compliance with domestic (OJK, PDP Law) and global (GDPR, ISO) regulations.' }
             ] 
         },
         { 
             id: 'mod9', title: 'ITSAM', icon: 'fa-laptop-code', 
-            desc: 'Manajemen Layanan IT (*ITSM*) dan Aset IT (*ITAM*) secara end-to-end.', 
+            desc: 'End-to-end IT Service Management (ITSM) and IT Asset Management (ITAM).', 
             processes: [
-                { id: '9.1', title: 'IT Asset Mgmt', type: 'table', dbKey: 'it_asset', cols: ['Asset Tag', 'Serial Num', 'User', 'Purchase Date', 'Lifecycle Stage'], desc: 'Manajemen siklus hidup hardware dan software, dari akuisisi hingga penghapusan.' }, 
-                { id: '9.2', title: 'IT Service Mgmt', type: 'kanban', dbKey: 'it_itsm', desc: 'Penanganan insiden (*incident*), permintaan (*request*), dan masalah (*problem*) layanan IT.' },
-                { id: '9.3', title: 'IT Change Mgmt', type: 'table', dbKey: 'it_change', cols: ['RFC ID', 'System', 'Risk', 'CAB Approval', 'Schedule'], desc: 'Pengendalian perubahan IT secara terstruktur dan terdokumentasi.' }
+                { id: '9.1', title: 'IT Asset Mgmt', type: 'table', dbKey: 'it_asset', cols: ['Asset Tag', 'Serial Num', 'User', 'Purchase Date', 'Lifecycle Stage'], desc: 'Managing hardware and software lifecycle, from acquisition to disposal.' }, 
+                { id: '9.2', title: 'IT Service Mgmt', type: 'kanban', dbKey: 'it_itsm', desc: 'Handling IT service incidents, requests, and problems.' },
+                { id: '9.3', title: 'IT Change Mgmt', type: 'table', dbKey: 'it_change', cols: ['RFC ID', 'System', 'Risk', 'CAB Approval', 'Schedule'], desc: 'Structured and documented IT change control.' }
             ] 
         },
         { 
             id: 'mod10', title: 'LMS', icon: 'fa-graduation-cap', 
-            desc: 'Learning Management System untuk pengembangan kompetensi dan kepatuhan pelatihan.', 
+            desc: 'Learning Management System for competency development and training compliance.', 
             processes: [
-                { id: '10.1', title: 'Training Catalog', type: 'catalog', desc: 'Katalog kursus, modul pelatihan *online*, dan *onboarding* karyawan.' },
-                { id: '10.2', title: 'Personal Development', type: 'table', dbKey: 'lms_pd', cols: ['Emp Name', 'Course', 'Progress', 'Score', 'Cert Status'], desc: 'Pelacakan jalur pembelajaran individu dan status sertifikasi wajib.' }
+                { id: '10.1', title: 'Training Catalog', type: 'catalog', desc: 'Catalog of courses, online training modules, and employee onboarding.' },
+                { id: '10.2', title: 'Personal Development', type: 'table', dbKey: 'lms_pd', cols: ['Emp Name', 'Course', 'Progress', 'Score', 'Cert Status'], desc: 'Tracking individual learning paths and mandatory certification status.' }
             ] 
         }
     ]
@@ -160,17 +160,18 @@ const Database = {
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        App.toast('Dataset berhasil diekspor (.txt)');
+        App.toast('Dataset exported successfully (.txt)');
     },
 
     loadFromFile(content) {
         try {
             this.data = JSON.parse(content);
             this.save();
-            App.toast('Dataset berhasil dimuat. Sistem akan me-refresh...');
+            App.toast('Dataset loaded successfully. System will refresh...');
             setTimeout(() => location.reload(), 1000);
         } catch (e) {
-            alert('Format Dataset Tidak Valid! Pastikan file .txt berasal dari sistem ini.');
+            // Changed alert message to English
+            alert('Invalid Dataset Format! Please ensure the .txt file originated from this system.');
         }
     },
 
@@ -183,7 +184,8 @@ const Database = {
     get(key) { return this.data[key] || []; },
 
     hardReset() {
-        if(confirm('PERINGATAN! Anda akan menghapus seluruh data yang tersimpan di Local Storage. Lanjutkan?')) {
+        // Changed confirmation message to English
+        if(confirm('WARNING! You are about to delete all stored data from Local Storage. Continue?')) {
             localStorage.removeItem(DB_NAME);
             location.reload();
         }
@@ -403,11 +405,12 @@ const Database = {
             'Vendor Screening': [{t:'Cyber Security Experts', d:'Reviewing 3 external firms.'}]
         };
         
+        // FIX: Corrected syntax error by replacing ']]}' with '};'
         this.data['svc_sow'] = {
             'Drafting': [{t:'SOW Security Audit', d:'Vendor: CyberDef. Scope: Pentest.'}],
             'Negotiation': [{t:'SOW Cleaning Svc', d:'Vendor: CleanCo. Nego harga per m2.'}],
             'Active': [{t:'SOW Dev Outsourcing', d:'Vendor: DevHouse. 10 Developer Java.'}]
-        };
+        }; 
         
         this.data['svc_perf'] = [
             ['SOW-001', 'DevHouse', 'Phase 2 Completion', 'Code Review & UAT', 'Pass'],
@@ -525,6 +528,7 @@ const App = {
         menu.innerHTML = html;
         
         // Add Database Controls to Sidebar Bottom
+        // Display elements kept in English as they are part of the System UI/UX
         menu.innerHTML += `
             <div class="nav-category" style="margin-top:20px;">SYSTEM DATA</div>
             <div class="nav-item" onclick="Database.exportToFile()"><i class="fa-solid fa-download"></i> <span class="nav-text">Download DB (.txt)</span></div>
@@ -551,6 +555,7 @@ const App = {
         
         const mod = AppConfig.modules.find(m => m.id === modId);
         const root = document.getElementById('appRoot');
+        // Titles and Descriptions are now in English (from AppConfig)
         document.getElementById('breadcrumbs').innerText = mod.title;
         currentProcessId = null; // Reset current process on navigation
 
@@ -632,7 +637,7 @@ const App = {
                         <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted);"></i>
                         <input type="text" placeholder="Search..." class="search-input" onkeyup="App.filterTable(this, '${tableId}')">
                     </div>
-                    <button class="btn-action-light" onclick="App.exportToCSV('${tableId}')"><i class="fa-solid fa-file-export"></i></button>
+                    <button class="btn-action-light" onclick="App.exportToCSV('${tableId}')"><i class="fa-solid fa-file-export"></i> Export CSV</button>
                 </div>
             </div>
             <div class="cc-body no-padding">
@@ -658,7 +663,7 @@ const App = {
     formatCellData(data) {
         if(!data) return '-';
         const str = String(data);
-        // Logic Format Render yang "Pintar"
+        // Logic Format Render yang "Pintar" (Smart Rendering Logic)
         if (str.includes('$')) return `<span style="font-family:'JetBrains Mono', monospace; font-weight:500;">${str}</span>`;
         if (str.match(/^\d{4}-\d{2}-\d{2}$/)) return `<span style="color:var(--text-muted);">${str}</span>`; // Date
         if (str.includes('(') && str.includes(')')) return `<span style="font-family:'JetBrains Mono', monospace;">${str}</span>`; // Account Code
@@ -667,9 +672,9 @@ const App = {
              const color = pct > 80 ? 'var(--success)' : pct > 40 ? 'var(--warning)' : 'var(--danger)';
              return `<div style="width:80px; height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden; margin-bottom: 4px;"><div style="width:${pct}%; height:100%; background:${color}; border-radius:3px;"></div></div><span style="font-size:10px; color:var(--text-muted);">${str}</span>`;
         }
-        if (str === 'Active' || str === 'Compliant' || str === 'Paid' || str === 'Approved' || str === 'Pass' || str === 'Completed' || str === 'Healthy' || str === 'Low') return `<span class="status-badge success">${str}</span>`;
-        if (str === 'Pending' || str === 'Drafting' || str === 'Maintenance' || str === 'Medium' || str === 'In Progress' || str === 'In Audit' || str === 'Reviewing' || str === 'At Risk' || str === 'Pending Review' || str === 'Provisioning') return `<span class="status-badge warning">${str}</span>`;
-        if (str === 'Rejected' || str === 'Critical' || str === 'Gap Found' || str === 'Fail' || str === 'Breached' || str === 'High') return `<span class="status-badge danger">${str}</span>`;
+        if (str === 'Active' || str === 'Compliant' || str === 'Paid' || str === 'Approved' || str === 'Pass' || str === 'Completed' || str === 'Healthy' || str === 'Low' || str === 'Certified') return `<span class="status-badge success">${str}</span>`;
+        if (str === 'Pending' || str === 'Drafting' || str === 'Maintenance' || str === 'Medium' || str === 'In Progress' || str === 'In Audit' || str === 'Reviewing' || str === 'At Risk' || str === 'Pending Review' || str === 'Provisioning' || str === 'Warning') return `<span class="status-badge warning">${str}</span>`;
+        if (str === 'Rejected' || str === 'Critical' || str === 'Gap Found' || str === 'Fail' || str === 'Breached' || str === 'High' || str === 'Error') return `<span class="status-badge danger">${str}</span>`;
         return str;
     },
 
@@ -702,12 +707,13 @@ const App = {
 
     // --- RENDERER KHUSUS UNTUK MODUL LMS/CATALOG (mod10.1) ---
     renderCatalog() {
+        // Descriptions translated to English
         const catalogData = [
-            { id:'C101', title: 'IFRS 15 Compliance Training', desc: 'Pelatihan wajib untuk tim Finance terkait pengakuan pendapatan (PSAK 72).', icon: 'fa-book-quran', duration: '12 Jam', category: 'Compliance' },
-            { id:'C102', title: 'Cloud Security Fundamentals', desc: 'Dasar-dasar pengamanan lingkungan Azure/AWS untuk tim IT.', icon: 'fa-lock', duration: '8 Jam', category: 'Technical' },
-            { id:'C103', title: 'Project Management Agile Scrum', desc: 'Metodologi Agile dan Scrum untuk tim Proyek dan Operasi.', icon: 'fa-clipboard-list', duration: '20 Jam', category: 'Methodology' },
-            { id:'C104', title: 'UU PDP Data Handling Policy', desc: 'Kepatuhan terhadap Undang-Undang Perlindungan Data Pribadi (UU No. 27/2022).', icon: 'fa-gavel', duration: '4 Jam', category: 'Compliance' },
-            { id:'C105', title: 'Executive Leadership Strategy', desc: 'Kursus untuk level manajemen mengenai visi dan kepemimpinan korporat.', icon: 'fa-user-tie', duration: '35 Jam', category: 'Soft Skill' }
+            { id:'C101', title: 'IFRS 15 Compliance Training', desc: 'Mandatory training for the Finance team on Revenue Recognition (PSAK 72).', icon: 'fa-book-quran', duration: '12 Hours', category: 'Compliance' },
+            { id:'C102', title: 'Cloud Security Fundamentals', desc: 'Basics of securing Azure/AWS environments for the IT team.', icon: 'fa-lock', duration: '8 Hours', category: 'Technical' },
+            { id:'C103', title: 'Project Management Agile Scrum', desc: 'Agile and Scrum methodologies for Project and Operations teams.', icon: 'fa-clipboard-list', duration: '20 Hours', category: 'Methodology' },
+            { id:'C104', title: 'Data Privacy Handling Policy', desc: 'Compliance with Indonesia\'s Personal Data Protection Law (UU No. 27/2022).', icon: 'fa-gavel', duration: '4 Hours', category: 'Compliance' },
+            { id:'C105', title: 'Executive Leadership Strategy', desc: 'Course for management levels on corporate vision and leadership.', icon: 'fa-user-tie', duration: '35 Hours', category: 'Soft Skill' }
         ];
 
         return `
@@ -715,7 +721,7 @@ const App = {
             <div class="cc-header-wrapper">
                 <div class="cc-title-section">
                     <div class="cc-title"><i class="fa-solid fa-graduation-cap" style="margin-right:8px; color:var(--primary);"></i> Course Catalog</div>
-                    <div class="cc-subtitle">Total ${catalogData.length} pelatihan tersedia. Filter berdasarkan kategori di bawah.</div>
+                    <div class="cc-subtitle">Total ${catalogData.length} training courses available. Filter by category below.</div>
                 </div>
                 <div class="cc-actions">
                     <button class="btn-action-light"><i class="fa-solid fa-calendar-alt"></i> View Schedule</button>
@@ -784,12 +790,14 @@ const App = {
         let fields = [];
         
         if (currentProcessId && currentProcessId.cols) {
-            title.innerText = `Add to ${currentProcessId.title}`;
+            // Modal Title in English
+            title.innerText = `Add New Entry to ${currentProcessId.title}`;
             fields = currentProcessId.cols.map(c => ({label: c, type: c.includes('Date') ? 'date' : 'text', id: 'f-'+c.replace(/ /g,'')}));
         } 
         
         let html = '';
         fields.forEach(f => {
+            // Input placeholder in English
             html += `<div class="form-group"><label>${f.label}</label><input type="${f.type}" id="${f.id}" class="form-input" placeholder="Enter ${f.label}..."></div>`;
         });
         
@@ -835,7 +843,7 @@ const App = {
                     <div class="filter-pill active">Q4 2025</div>
                     <div class="filter-pill">Global Region</div>
                     <div class="filter-pill"><i class="fa-solid fa-filter"></i> Filter</div>
-                    <button class="btn-sm primary" onclick="App.renderDetailedBIDash(document.getElementById('appRoot'))"><i class="fa-solid fa-rotate"></i></button>
+                    <button class="btn-sm primary" onclick="App.renderDetailedBIDash(document.getElementById('appRoot'))"><i class="fa-solid fa-rotate"></i> Refresh</button>
                 </div>
             </div>
 
@@ -903,9 +911,9 @@ const App = {
                                 <div style="font-size:10px; opacity:0.7;">Real-time Analysis</div>
                             </div>
                         </div>
-                        <div class="ai-text-body">
-                            "Berdasarkan pola data Q4, <span class="ai-highlight">Efisiensi Rantai Pasok (Procurement)</span> memberikan peningkatan profit terbesar. <br><br>
-                            <i class="fa-solid fa-circle-exclamation" style="color:#f87171"></i> <strong>Peringatan GRC:</strong> Risiko kepatuhan UU PDP meningkat (REG-ID-01). Intervensi segera direkomendasikan."
+                        <div class="ai-text-body" id="ai-dashboard-insight">
+                            <i class="fa-solid fa-robot" style="margin-right:8px; color:#a5b4fc;"></i> "System ready. Initial analysis complete. The highest impact is from <span class="ai-highlight">Supply Chain Efficiency (Procurement)</span>. <br><br>
+                            <i class="fa-solid fa-circle-exclamation" style="color:#f87171"></i> <strong>GRC Warning:</strong> Data Privacy compliance risk (REG-ID-01) is escalating. Immediate intervention recommended in the GRC module."
                         </div>
                         <div class="ai-btn-group">
                             <button class="btn-glass" onclick="App.toggleAI()"><i class="fa-solid fa-wand-magic-sparkles"></i> Ask AI</button>
@@ -1003,18 +1011,18 @@ const App = {
                 <div class="card-elegant">
                     <div class="section-title">Critical Attention (Alerts)</div>
                     <div class="alert-list">
-                        <div class="alert-item-mod critical">
+                        <div class="alert-item-mod critical" onclick="App.openDetailPanelFromDashboard('GRC', 'Compliance Alert: UU PDP')">
                             <i class="fa-solid fa-circle-xmark text-danger" style="margin-top:2px;"></i>
                             <div class="aim-content">
                                 <h4>Audit Findings (GRC)</h4>
-                                <p>3 Compliance points unmet (PDP, GDPR).</p>
+                                <p>3 Compliance points unmet (PDP, GDPR). Review REG-ID-01.</p>
                             </div>
                         </div>
-                        <div class="alert-item-mod warning">
+                        <div class="alert-item-mod warning" onclick="App.openDetailPanelFromDashboard('Finance', 'AP Aging Alert: Invoices Due')">
                             <i class="fa-solid fa-clock text-warning" style="margin-top:2px;"></i>
                             <div class="aim-content">
                                 <h4>AP Aging (Finance)</h4>
-                                <p>5 Invoices past due date (>30 days).</p>
+                                <p>5 Invoices past due date (>30 days). Check PO-2411-002.</p>
                             </div>
                         </div>
                     </div>
@@ -1169,7 +1177,25 @@ const App = {
     openSettings() { document.getElementById('modalSettings').classList.add('open'); },
     toast(msg) { const c = document.getElementById('toast-container'); const d = document.createElement('div'); d.className='toast show'; d.innerHTML=`<i class="fa-solid fa-circle-check"></i> ${msg}`; c.appendChild(d); setTimeout(()=> { d.classList.remove('show'); setTimeout(()=>d.remove(), 300); }, 3000); },
 
-    // Dummy AI Simulation (diperkuat)
+    // NEW: Typewriter Effect
+    typewriterEffect(elementId, text) {
+        let i = 0;
+        const target = document.getElementById(elementId);
+        target.innerHTML = ''; // Clear content for effect
+        target.style.opacity = 1;
+        const speed = 20; // Typing speed in milliseconds
+
+        function type() {
+            if (i < text.length) {
+                target.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    },
+
+    // Dummy AI Simulation (diperkuat dengan Typewriter dan English output)
     simulateAI() {
         const input = document.getElementById('aiInput');
         const val = input.value;
@@ -1182,23 +1208,105 @@ const App = {
         
         setTimeout(() => {
             const typingId = 'typing-' + Date.now();
-            el.innerHTML += `<div class="ai-insight" id="${typingId}">...</div>`;
+            el.innerHTML += `<div class="ai-insight" id="${typingId}" style="opacity:0;"></div>`;
             el.scrollTop = el.scrollHeight;
             
             setTimeout(() => {
                 const context = currentProcessId ? currentProcessId.title : 'Global Context Dashboard';
-                const reply = `I have analyzed the current **${context}** data. Found critical insights related to "${val}". Recommended action: Review **GRC Controls IC-IT-02** and **AR Aging Report**.`;
-                document.getElementById(typingId).innerHTML = reply;
+                let reply = `**Analyzing Query:** "${val}".\n\n**Context:** ${context}.\n\n**Neural Core Response (English):** Based on the current enterprise data, I have identified a key linkage. Your query relates to high-risk areas. Please review the **GRC Controls IC-IT-02 (Critical)** and related **IT Asset Management (ITAM)** records immediately for security compliance.`;
+                
+                // Convert Markdown to HTML for cleaner rendering
+                reply = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                             .replace(/\n/g, '<br>');
+
+                this.typewriterEffect(typingId, reply);
                 el.scrollTop = el.scrollHeight;
-            }, 1000);
+            }, 400);
         }, 400);
     },
     
-    // openRecordDetail (Diperkuat untuk menarik data asli dari database)
+    // Fungsi untuk mendapatkan Detail Modul Terkait (Logic remains the same, output is already generic/English)
+    getRelatedModuleDetails(record) {
+        const dbKey = currentProcessId.dbKey;
+        const details = [];
+        
+        // Logic for Finance -> Project: Find related Project Accounting record based on Project Name
+        if (dbKey === 'fin_proj' && record && record[0]) {
+            const project = record[0];
+            const pmExec = Database.get('pm_exec').find(r => r[0] === project);
+            if (pmExec) {
+                details.push({ 
+                    title: 'Project Execution Status (Modul Project)', 
+                    icon: 'fa-diagram-project', 
+                    items: [
+                        { label: 'Manager', value: pmExec[1] },
+                        { label: 'Health Status', value: App.formatCellData(pmExec[3]) },
+                        { label: 'Deadline', value: pmExec[4] }
+                    ] 
+                });
+            }
+        }
+        
+        // Logic for HCM -> LMS: Find Certification Status based on Employee Name
+        if (dbKey === 'hr_core' && record && record[1]) {
+            const employee = record[1];
+            const lmsRecord = Database.get('lms_pd').find(r => r[0] === employee);
+            if (lmsRecord) {
+                details.push({ 
+                    title: 'LMS & Certification Status (Modul LMS)', 
+                    icon: 'fa-graduation-cap', 
+                    items: [
+                        { label: 'Course', value: lmsRecord[1] },
+                        { label: 'Progress', value: App.formatCellData(lmsRecord[2]) },
+                        { label: 'Certification', value: App.formatCellData(lmsRecord[4]) }
+                    ] 
+                });
+            }
+        }
+
+        // Logic for GRC Control -> ITSAM: Find related IT Asset/Change
+        if (dbKey === 'grc_ctrl' && record && record[0] === 'IC-IT-02') {
+             details.push({ 
+                title: 'ITSAM Integration Check (Modul ITSAM)', 
+                icon: 'fa-laptop-code', 
+                items: [
+                    { label: 'Related Change Request', value: 'RFC-103 (Rejected)' },
+                    { label: 'Critical Asset Tag', value: 'HW-LP-001 (Rafindita S.)' }
+                ] 
+            });
+        }
+        
+        // Logic for CRM AR -> Finance GL: Find invoice transaction in GL
+        if (dbKey === 'fin_ar' && record && record[0]) {
+            const invID = record[0];
+            const glRecord = Database.get('fin_gl').find(r => r[0].includes('JE-10004'));
+            if(glRecord) {
+                 details.push({ 
+                    title: 'GL Transaction Reference (Modul Finance)', 
+                    icon: 'fa-coins', 
+                    items: [
+                        { label: 'Journal ID', value: glRecord[0] },
+                        { label: 'Date Posted', value: glRecord[4] },
+                        { label: 'Account Code', value: glRecord[3] }
+                    ] 
+                });
+            }
+        }
+        
+        return details;
+    },
+
+    // openRecordDetail (Diperkuat untuk menarik data asli dari database dan menambahkan tab integrasi)
     openRecordDetail(el, type, indexOrTitle, dbKeyOrDesc) {
         const panel = document.getElementById('panelDetail');
         const content = document.getElementById('detailContent');
-        
+        const tabsHtml = `
+            <div class="detail-tabs">
+                <div class="d-tab active" data-tab="overview">Overview</div>
+                <div class="d-tab" data-tab="integration">Integration</div>
+                <div class="d-tab" data-tab="history">History</div>
+            </div>`;
+
         if (type === 'table') {
             document.querySelectorAll('tr.selected-row').forEach(row => row.classList.remove('selected-row'));
             if(el) el.classList.add('selected-row');
@@ -1217,18 +1325,10 @@ const App = {
                 mainData.push({ label: col, val: record[i], formatted: this.formatCellData(record[i]) });
             });
             
-            content.innerHTML = `
-                <div class="detail-hero">
-                    <div class="dh-id">#${id}</div>
-                    <div class="dh-title">${title}</div>
-                    <div style="margin-top:6px; font-size:12px;">Current Status: ${statusHTML}</div>
-                    <div class="detail-tabs">
-                        <div class="d-tab active">Overview</div>
-                        <div class="d-tab">History</div>
-                        <div class="d-tab">Files</div>
-                    </div>
-                </div>
+            // Generate Content for Overview Tab
+            const overviewContent = `
                 <div class="detail-section">
+                    <h4 class="section-sub-title"><i class="fa-solid fa-clipboard-list"></i> Core Data Points</h4>
                     <div class="ds-grid">
                         ${mainData.map(d => `
                             <div class="ds-item">
@@ -1237,80 +1337,228 @@ const App = {
                             </div>
                         `).join('')}
                     </div>
-                    <h4 style="margin-bottom:12px; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-top:16px;">Audit Trail</h4>
+                </div>`;
+            
+            // Generate Content for Integration Tab
+            const relatedDetails = this.getRelatedModuleDetails(record);
+            const integrationContent = `
+                <div class="detail-section">
+                    <h4 class="section-sub-title"><i class="fa-solid fa-link"></i> Cross-Module Data Linkage</h4>
+                    ${relatedDetails.length > 0 ? relatedDetails.map(rel => `
+                        <div class="related-module-card">
+                            <div class="rel-title"><i class="fa-solid ${rel.icon}"></i> ${rel.title}</div>
+                            <div class="rel-body">
+                                ${rel.items.map(item => `
+                                    <div class="ds-item-small">
+                                        <label>${item.label}</label>
+                                        <div>${item.value}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('') : '<div class="empty-state" style="padding:15px; font-size:11px;"><i class="fa-solid fa-puzzle-piece" style="font-size:16px;"></i><p>No direct cross-module data linkage found for this record.</p></div>'}
+                </div>`;
+                
+            // Generate Content for History Tab
+            const historyContent = `
+                <div class="detail-section">
+                    <h4 class="section-sub-title"><i class="fa-solid fa-clock-rotate-left"></i> Transaction Audit Trail</h4>
                     <div class="activity-line">
                         <div class="act-header">Record Viewed</div>
                         <div class="act-time">Just now by You</div>
                     </div>
+                    <div class="activity-line">
+                        <div class="act-header">${statusHTML.includes('danger') ? 'Critical Status Set' : 'Status Updated'}</div>
+                        <div class="act-time">5 days ago by Auto-System</div>
+                    </div>
                     <div class="activity-line" style="border:none;">
-                        <div class="act-header">Created</div>
+                        <div class="act-header">Record Created</div>
                         <div class="act-time">${record[cols.findIndex(c => c.includes('Date') || c.includes('Inv'))] || date(-10)}</div>
                     </div>
+                </div>`;
+
+
+            content.innerHTML = `
+                <div class="detail-hero">
+                    <div class="dh-id">#${id}</div>
+                    <div class="dh-title">${title}</div>
+                    <div style="margin-top:6px; font-size:12px;">Current Status: ${statusHTML}</div>
+                    ${tabsHtml}
+                </div>
+                <div class="detail-tabs-content" id="tabContent">
+                    <div id="tab-overview">${overviewContent}</div>
+                    <div id="tab-integration" style="display:none;">${integrationContent}</div>
+                    <div id="tab-history" style="display:none;">${historyContent}</div>
                 </div>
             `;
+            
         } else if (type === 'kanban') {
-            // Logika untuk data Kanban (indexOrTitle=Title, dbKeyOrDesc=Description)
+            // Logic for Kanban data (indexOrTitle=Title, dbKeyOrDesc=Description)
             const taskTitle = indexOrTitle;
             const taskDesc = dbKeyOrDesc;
             const processTitle = currentProcessId.title;
+            const statusHTML = `<span class="status-badge warning">In Progress</span>`;
             
             content.innerHTML = `
                 <div class="detail-hero">
                     <div class="dh-id">TASK-${Math.floor(Math.random()*1000)}</div>
                     <div class="dh-title">${taskTitle}</div>
-                    <div style="margin-top:6px; font-size:12px;"><span class="status-badge warning">In Progress</span></div>
-                    <div class="detail-tabs">
-                        <div class="d-tab active">Overview</div>
-                        <div class="d-tab">Workflow</div>
-                        <div class="d-tab">Discussions</div>
-                    </div>
+                    <div style="margin-top:6px; font-size:12px;">Current Status: ${statusHTML}</div>
+                    ${tabsHtml}
                 </div>
-                <div class="detail-section">
-                    <h4 style="margin-bottom:12px; font-size:11px; text-transform:uppercase; color:var(--text-muted);">Description</h4>
-                    <p style="font-size:12px; margin-bottom: 20px;">${taskDesc}</p>
-                    
-                    <div class="ds-grid">
-                        <div class="ds-item"><label>Owner</label><div>${rand(names)}</div></div>
-                        <div class="ds-item"><label>Module</label><div>${processTitle}</div></div>
-                        <div class="ds-item"><label>Created</label><div>${date(-5)}</div></div>
-                        <div class="ds-item"><label>Priority</label><div>${rand(['High', 'Medium', 'Low'])}</div></div>
+                <div class="detail-tabs-content" id="tabContent">
+                    <div id="tab-overview">
+                        <div class="detail-section">
+                            <h4 class="section-sub-title"><i class="fa-solid fa-file-lines"></i> Description</h4>
+                            <p style="font-size:12px; margin-bottom: 20px;">${taskDesc}</p>
+                            
+                            <h4 class="section-sub-title" style="margin-top:16px;"><i class="fa-solid fa-circle-info"></i> Metadata</h4>
+                            <div class="ds-grid">
+                                <div class="ds-item"><label>Owner</label><div>${rand(names)}</div></div>
+                                <div class="ds-item"><label>Module</label><div>${processTitle}</div></div>
+                                <div class="ds-item"><label>Created</label><div>${date(-5)}</div></div>
+                                <div class="ds-item"><label>Priority</label><div>${rand(['High', 'Medium', 'Low'])}</div></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <h4 style="margin-bottom:12px; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-top:16px;">Activity Log</h4>
-                     <div class="activity-line">
-                        <div class="act-header">Status Updated to 'In Progress'</div>
-                        <div class="act-time">1 hour ago</div>
+                    <div id="tab-integration" style="display:none;">
+                        <div class="detail-section">
+                             <h4 class="section-sub-title"><i class="fa-solid fa-link"></i> Cross-Module Data Linkage</h4>
+                             <div class="empty-state" style="padding:15px; font-size:11px;"><i class="fa-solid fa-puzzle-piece" style="font-size:16px;"></i><p>Kanban items typically link to specific tables after approval (e.g., SOW -> AP, Lead -> AR).</p></div>
+                        </div>
                     </div>
-                     <div class="activity-line" style="border:none;">
-                        <div class="act-header">Task Created</div>
-                        <div class="act-time">${date(-5)}</div>
+                    <div id="tab-history" style="display:none;">
+                         <div class="detail-section">
+                            <h4 class="section-sub-title"><i class="fa-solid fa-clock-rotate-left"></i> Workflow Log</h4>
+                             <div class="activity-line">
+                                <div class="act-header">Status Updated to 'In Progress'</div>
+                                <div class="act-time">1 hour ago by User: John Smith</div>
+                            </div>
+                             <div class="activity-line" style="border:none;">
+                                <div class="act-header">Task Created in 'Proposed'</div>
+                                <div class="act-time">${date(-5)} by User: Rafindita S.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
         } else if (type === 'catalog') {
+             // Catalog details in English
              content.innerHTML = `
                 <div class="detail-hero">
                     <div class="dh-id">${dbKeyOrDesc}</div>
                     <div class="dh-title">${indexOrTitle}</div>
                     <div style="margin-top:6px; font-size:12px;"><span class="status-badge success">Available</span></div>
                     <div class="detail-tabs">
-                        <div class="d-tab active">Syllabus</div>
-                        <div class="d-tab">Reviews</div>
+                        <div class="d-tab active" data-tab="syllabus">Syllabus</div>
+                        <div class="d-tab" data-tab="reviews">Reviews</div>
                     </div>
                 </div>
-                <div class="detail-section">
-                    <h4 style="margin-bottom:12px; font-size:11px; text-transform:uppercase; color:var(--text-muted);">Course Content</h4>
-                    <ul style="list-style:none; padding-left:0; font-size:12px; line-height:2;">
-                        <li><i class="fa-solid fa-check-circle" style="color:var(--success); margin-right:8px;"></i> Modul 1: Dasar-dasar UU PDP (Indonesia)</li>
-                        <li><i class="fa-solid fa-check-circle" style="color:var(--success); margin-right:8px;"></i> Modul 2: Prinsip Kepatuhan Data Global (GDPR)</li>
-                        <li><i class="fa-solid fa-check-circle" style="color:var(--success); margin-right:8px;"></i> Modul 3: Role & Tanggung Jawab DPO</li>
-                        <li><i class="fa-solid fa-check-circle" style="color:var(--success); margin-right:8px;"></i> Assessment Akhir</li>
-                    </ul>
-                    <button class="btn-primary" style="margin-top:20px; font-size:11px;">Start Course Now</button>
+                <div class="detail-tabs-content" id="tabContent">
+                    <div id="tab-syllabus">
+                        <div class="detail-section">
+                            <h4 class="section-sub-title"><i class="fa-solid fa-scroll"></i> Course Content</h4>
+                            <ul style="list-style:none; padding-left:0; font-size:12px; line-height:2;">
+                                <li><i class="fa-solid fa-book-open" style="color:var(--primary); margin-right:8px;"></i> Module 1: Basics of PDP Law (Indonesia)</li>
+                                <li><i class="fa-solid fa-book-open" style="color:var(--primary); margin-right:8px;"></i> Module 2: Global Data Compliance Principles (GDPR)</li>
+                                <li><i class="fa-solid fa-book-open" style="color:var(--primary); margin-right:8px;"></i> Module 3: DPO Roles & Responsibilities</li>
+                                <li><i class="fa-solid fa-book-open" style="color:var(--primary); margin-right:8px;"></i> Final Compliance Assessment</li>
+                            </ul>
+                            <button class="btn-primary" style="margin-top:20px; font-size:11px; width:100%;"><i class="fa-solid fa-play-circle"></i> Start Course Now</button>
+                        </div>
+                    </div>
+                    <div id="tab-reviews" style="display:none;">
+                        <div class="detail-section">
+                             <h4 class="section-sub-title"><i class="fa-solid fa-star"></i> Feedback & Ratings</h4>
+                             <p style="font-size:12px; color:var(--text-muted);">Average Rating: 4.8 / 5.0 (125 participants)</p>
+                             <div style="margin-top:15px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+                                <div style="font-weight:600; font-size:11px;">Ahmad Dani <span style="float:right; color:var(--warning);"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span></div>
+                                <p style="font-size:11px; color:var(--text-muted);">Highly relevant for our current GRC focus.</p>
+                             </div>
+                        </div>
+                    </div>
                 </div>
             `;
         }
+
+        // Add Tab Switching Listener
+        setTimeout(() => {
+            document.querySelectorAll('#panelDetail .d-tab').forEach(tab => {
+                tab.onclick = function() {
+                    document.querySelectorAll('#panelDetail .d-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    document.querySelectorAll('#tabContent > div').forEach(c => c.style.display = 'none');
+                    document.getElementById('tab-' + this.getAttribute('data-tab')).style.display = 'block';
+                };
+            });
+        }, 10);
         
+        document.getElementById('panelDetail').classList.add('open');
+    },
+
+    // NEW: Open Detail Panel from Dashboard Alerts
+    openDetailPanelFromDashboard(module, title) {
+        const panel = document.getElementById('panelDetail');
+        const content = document.getElementById('detailContent');
+        
+        const tabsHtml = `
+            <div class="detail-tabs">
+                <div class="d-tab active" data-tab="alert">Alert Detail</div>
+                <div class="d-tab" data-tab="action">Mitigation Plan</div>
+            </div>`;
+            
+        let alertIcon = module === 'GRC' ? 'fa-triangle-exclamation' : 'fa-bell';
+        
+        // Alert content translated to English
+        content.innerHTML = `
+            <div class="detail-hero">
+                <div class="dh-id">ALERT-DASH-${Math.floor(Math.random()*100)}</div>
+                <div class="dh-title">${title}</div>
+                <div style="margin-top:6px; font-size:12px;"><span class="status-badge danger">Critical Alert</span></div>
+                ${tabsHtml}
+            </div>
+            <div class="detail-tabs-content" id="tabContent">
+                <div id="tab-alert">
+                    <div class="detail-section">
+                        <h4 class="section-sub-title"><i class="fa-solid ${alertIcon}"></i> Alert Context</h4>
+                        <p style="font-size:12px; margin-bottom: 20px;">This alert indicates a critical breach or impending risk within the **${module}** module. Immediate review is necessary.</p>
+                        
+                        <h4 class="section-sub-title" style="margin-top:16px;"><i class="fa-solid fa-layer-group"></i> Source Module Details</h4>
+                        <div class="ds-grid" style="grid-template-columns: 1fr;">
+                            <div class="ds-item"><label>Source Module</label><div>${module}</div></div>
+                            <div class="ds-item"><label>Specific Record ID</label><div>${module === 'GRC' ? 'REG-ID-01 (PDP Law)' : 'PO-2411-002'}</div></div>
+                            <div class="ds-item"><label>Risk Level</label><div>High (Regulatory & Financial)</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-action" style="display:none;">
+                    <div class="detail-section">
+                        <h4 class="section-sub-title"><i class="fa-solid fa-hammer"></i> Proposed Action Plan</h4>
+                        <ul style="font-size:12px; line-height:1.6; padding-left:20px;">
+                            <li>Re-assign **GRC Compliance** task REG-ID-01 to *Budi Gunawan*.</li>
+                            <li>Send automatic payment reminder to **Global Logistics Ltd**.</li>
+                            <li>Escalate to *Super Admin* for manual override approval.</li>
+                        </ul>
+                        <button class="btn-primary" style="margin-top:20px; font-size:11px; width:100%;"><i class="fa-solid fa-bolt"></i> Initiate Mitigation Workflow</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Add Tab Switching Listener (re-used logic)
+        setTimeout(() => {
+            document.querySelectorAll('#panelDetail .d-tab').forEach(tab => {
+                tab.onclick = function() {
+                    document.querySelectorAll('#panelDetail .d-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    document.querySelectorAll('#tabContent > div').forEach(c => c.style.display = 'none');
+                    document.getElementById('tab-' + this.getAttribute('data-tab')).style.display = 'block';
+                };
+            });
+        }, 10);
+
         document.getElementById('panelDetail').classList.add('open');
     },
 
@@ -1353,9 +1601,9 @@ const App = {
             }
         }
         
-        // Update info text
+        // Update info text (kept in English)
         const totalRecords = Database.get(currentProcessId.dbKey).length;
-        document.querySelector(`#${tableId}`).nextElementSibling.innerText = `Showing ${visibleCount} of ${totalRecords} entries`;
+        document.querySelector(`.cc-subtitle`).innerText = `Showing ${visibleCount} of ${totalRecords} entries`;
         // Hiding pagination for simplicity, but if needed, the logic can be added here
     },
     
