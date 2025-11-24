@@ -500,7 +500,10 @@ const App = {
     },
 
     renderTable(cols) {
+        // Generate ID unik untuk tabel ini agar search berfungsi spesifik
+        const tableId = 'table-' + Math.random().toString(36).substr(2, 9);
         const rows = DataService.getTableData(cols);
+        
         return `
         <div class="content-card">
             <div class="cc-header-wrapper">
@@ -511,20 +514,21 @@ const App = {
                 <div class="cc-actions">
                     <div class="search-wrapper small">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search Data..." class="search-input">
+                        <input type="text" placeholder="Search Data..." class="search-input" onkeyup="App.filterTable(this, '${tableId}')">
                     </div>
                     <button class="btn-action-light" onclick="App.toast('Filter Applied')"><i class="fa-solid fa-filter"></i> Filter</button>
-                    <button class="btn-action-light" onclick="App.toast('Exporting CSV...')"><i class="fa-solid fa-file-export"></i> Export</button>
+                    <button class="btn-action-light" onclick="App.exportToCSV('${tableId}')"><i class="fa-solid fa-file-export"></i> Export</button>
                 </div>
             </div>
 
             <div class="cc-body no-padding">
                 <div class="table-container" style="border:none; border-radius:0;">
-                    <table>
+                    <table id="${tableId}">
                         <thead>
                             <tr>
-                                ${cols.map(c => `<th>${c}</th>`).join('')}
-                                <th class="col-detail">Detail</th> </tr>
+                                ${cols.map((c, index) => `<th onclick="App.sortTable('${tableId}', ${index})">${c}</th>`).join('')}
+                                <th class="col-detail">Detail</th> 
+                            </tr>
                         </thead>
                         <tbody>
                             ${rows.map(r => `
@@ -539,17 +543,24 @@ const App = {
                             `).join('')}
                         </tbody>
                     </table>
+                    
+                    <div id="${tableId}-empty" class="empty-state" style="display:none;">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <h4>No matching records found</h4>
+                        <p>Try adjusting your search criteria.</p>
+                    </div>
+
                 </div>
             </div>
 
             <div class="cc-footer">
-                <span class="text-muted-sm">Showing <strong>1-8</strong> of <strong>124</strong> entries</span>
+                <span class="text-muted-sm" id="${tableId}-info">Showing <strong>${rows.length}</strong> entries</span>
                 <div class="pagination-btns">
-                    <button class="btn-icon-sm" disabled><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="btn-icon-sm active" style="background:var(--primary); color:white; border-color:var(--primary);">1</button>
-                    <button class="btn-icon-sm">2</button>
-                    <button class="btn-icon-sm">3</button>
-                    <button class="btn-icon-sm"><i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="btn-icon-sm" onclick="App.changePage(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="btn-icon-sm active" onclick="App.setActivePage(this)">1</button>
+                    <button class="btn-icon-sm" onclick="App.setActivePage(this)">2</button>
+                    <button class="btn-icon-sm" onclick="App.setActivePage(this)">3</button>
+                    <button class="btn-icon-sm" onclick="App.changePage(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>`;
@@ -896,6 +907,139 @@ const App = {
         panel.classList.add('open');
     },
 
+    filterTable(input, tableId) {
+        const filter = input.value.toLowerCase();
+        const table = document.getElementById(tableId);
+        const tr = table.getElementsByTagName("tr");
+        let visibleCount = 0;
+
+        for (let i = 1; i < tr.length; i++) { // Skip header
+            let found = false;
+            const td = tr[i].getElementsByTagName("td");
+            for (let j = 0; j < td.length - 1; j++) { // Skip kolom action
+                if (td[j]) {
+                    if (td[j].textContent.toLowerCase().indexOf(filter) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (found) {
+                tr[i].style.display = "";
+                visibleCount++;
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+        
+        // Toggle Empty State
+        const emptyState = document.getElementById(tableId + '-empty');
+        if(visibleCount === 0) {
+            table.style.display = 'none';
+            emptyState.style.display = 'block';
+        } else {
+            table.style.display = '';
+            emptyState.style.display = 'none';
+        }
+        
+        // Update info text
+        document.getElementById(tableId + '-info').innerHTML = `Showing <strong>${visibleCount}</strong> matching records`;
+    },
+
+    // 2. Fungsi Sorting Table
+    sortTable(tableId, n) {
+        const table = document.getElementById(tableId);
+        let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        switching = true;
+        dir = "asc"; 
+        
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                
+                // Bersihkan HTML tag untuk sorting teks murni
+                let xContent = x.innerText.toLowerCase();
+                let yContent = y.innerText.toLowerCase();
+                
+                if (dir == "asc") {
+                    if (xContent > yContent) { shouldSwitch = true; break; }
+                } else if (dir == "desc") {
+                    if (xContent < yContent) { shouldSwitch = true; break; }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount ++; 
+            } else {
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+        this.toast(`Sorted Column by ${dir.toUpperCase()}`);
+    },
+
+    // 3. Fungsi Export to CSV
+    exportToCSV(tableId) {
+        this.toast('Preparing CSV Download...');
+        const table = document.getElementById(tableId);
+        let csv = [];
+        const rows = table.querySelectorAll("tr");
+        
+        for (let i = 0; i < rows.length; i++) {
+            // Skip rows that are hidden by filter
+            if (rows[i].style.display === 'none') continue;
+            
+            let row = [], cols = rows[i].querySelectorAll("td, th");
+            for (let j = 0; j < cols.length - 1; j++) { // Skip kolom detail/action terakhir
+                 row.push('"' + cols[j].innerText + '"');
+            }
+            csv.push(row.join(","));
+        }
+
+        const csvFile = new Blob([csv.join("\n")], {type: "text/csv"});
+        const downloadLink = document.createElement("a");
+        downloadLink.download = `Export_Data_${new Date().toISOString().slice(0,10)}.csv`;
+        downloadLink.href = window.URL.createObjectURL(csvFile);
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    },
+
+    // 4. Pagination Visual Logic
+    setActivePage(btn) {
+        // Hapus class active dari siblings
+        const parent = btn.parentNode;
+        const siblings = parent.getElementsByClassName('btn-icon-sm');
+        for (let i = 0; i < siblings.length; i++) {
+            siblings[i].classList.remove('active');
+        }
+        btn.classList.add('active');
+        this.triggerLoader(); // Simulasi loading data baru
+        this.toast(`Page ${btn.innerText} loaded`);
+    },
+
+    changePage(btn, direction) {
+        // Logika simple untuk demo next/prev
+        const parent = btn.parentNode;
+        const current = parent.querySelector('.active');
+        let nextBtn;
+        
+        if (direction === 1) nextBtn = current.nextElementSibling;
+        else nextBtn = current.previousElementSibling;
+        
+        // Cek jika nextBtn adalah angka (bukan tombol panah itu sendiri)
+        if (nextBtn && !nextBtn.children.length) {
+            this.setActivePage(nextBtn);
+        }
+    },
     closeDetailPanel() {
         document.getElementById('panelDetail').classList.remove('open');
     }
